@@ -24,6 +24,7 @@ public class GAME_Processor extends JPanel implements Runnable {
 	final int FRAME_RATE_PER_SEC = 60;
 
 	GAME_Input input = new GAME_Input();
+	ENTITY_Player player = new ENTITY_Player(this, input);
 
 	Thread thread;
 	
@@ -42,14 +43,14 @@ public class GAME_Processor extends JPanel implements Runnable {
 	}
 	void update() {
 
-		// TO-DO: code here...
+		player.update();
 	}
 	public void paintComponent(Graphics g) {
 
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D)g;
 
-		// TO-DO: code here...
+		player.draw(g2);
 
 		String os = System.getProperty("os.name").toLowerCase();
 		if (os.contains("linux")) {

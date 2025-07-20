@@ -21,45 +21,45 @@ public class ENTITY_Player extends PARENT_Entity {
 		speed = 4;
 		direction = "down";
 
-		up = Toolkit.getDefaultToolkit().createImage("res/up.gif");
-		down = Toolkit.getDefaultToolkit().createImage("res/down.gif");
-		left = Toolkit.getDefaultToolkit().createImage("res/left.gif");
-		right = Toolkit.getDefaultToolkit().createImage("res/right.gif");
-		upleft = Toolkit.getDefaultToolkit().createImage("res/upleft.gif");
-		upright = Toolkit.getDefaultToolkit().createImage("res/upright.gif");
-		downleft = Toolkit.getDefaultToolkit().createImage("res/downleft.gif");
-		downright = Toolkit.getDefaultToolkit().createImage("res/downright.gif");
+		up = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_up.gif");
+		down = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_down.gif");
+		left = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_left.gif");
+		right = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_right.gif");
+		upleft = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_upleft.gif");
+		upright = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_upright.gif");
+		downleft = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_downleft.gif");
+		downright = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_downright.gif");
 	}
 	public void update() {
 		int nextX = x;
 		int nextY = y;
 
-		if (keyH.wPressed && keyH.aPressed) {
+		if (input.wPressed && input.aPressed) {
 			direction = "upleft";
 			nextX -= speed;
 			nextY -= speed;
-		} else if (keyH.wPressed && keyH.dPressed) {
+		} else if (input.wPressed && input.dPressed) {
 			direction = "upright";
 			nextX += speed;
 			nextY -= speed;
-		} else if (keyH.sPressed && keyH.aPressed) {
+		} else if (input.sPressed && input.aPressed) {
 			direction = "downleft";
 			nextX -= speed;
 			nextY += speed;
-		} else if (keyH.sPressed && keyH.dPressed) {
+		} else if (input.sPressed && input.dPressed) {
 			direction = "downright";
 			nextX += speed;
 			nextY += speed;
-		} else if (keyH.wPressed) {
+		} else if (input.wPressed) {
 			direction = "up";
 			nextY -= speed;
-		} else if (keyH.aPressed) {
+		} else if (input.aPressed) {
 			direction = "left";
 			nextX -= speed;
-		} else if (keyH.sPressed) {
+		} else if (input.sPressed) {
 			direction = "down";
 			nextY += speed;
-		} else if (keyH.dPressed) {
+		} else if (input.dPressed) {
 			direction = "right";
 			nextX += speed;
 		}
@@ -70,7 +70,6 @@ public class ENTITY_Player extends PARENT_Entity {
 			y = nextY;
 		}
 	}
-
 	public void draw(Graphics2D g2) {
 
 		Image gif = null;
