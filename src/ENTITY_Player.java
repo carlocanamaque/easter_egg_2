@@ -11,6 +11,8 @@ public class ENTITY_Player extends PARENT_Entity {
 	GAME_Processor processor;
 	GAME_Input input;
 
+	Image up_hit, down_hit, left_hit, right_hit, upleft_hit, upright_hit, downleft_hit, downright_hit;
+
 	public ENTITY_Player(GAME_Processor processor, GAME_Input input) {
 
 		this.processor = processor;
@@ -28,6 +30,15 @@ public class ENTITY_Player extends PARENT_Entity {
 		upright = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_upright.gif");
 		downleft = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_downleft.gif");
 		downright = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_downright.gif");
+
+		up_hit = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_up_hit.gif");
+		down_hit = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_down_hit.gif");
+		left_hit = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_left_hit.gif");
+		right_hit = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_right_hit.gif");
+		upleft_hit = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_upleft_hit.gif");
+		upright_hit = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_upright_hit.gif");
+		downleft_hit = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_downleft_hit.gif");
+		downright_hit = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_downright_hit.gif");
 	}
 	public void update() {
 
