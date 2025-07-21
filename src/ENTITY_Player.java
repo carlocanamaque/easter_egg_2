@@ -107,11 +107,17 @@ public class ENTITY_Player extends PARENT_Entity {
 				if(input.kPressed) {
 					gif = up_hit;
 				}
+				if(input.pPressed) {
+					g2.drawImage(up_throw, x, (y - (2 * processor.TILE_SIZE)), processor.TILE_SIZE, (2 * processor.TILE_SIZE), processor);
+				}
 				break;
 			case "left":
 				gif = left;
 				if(input.kPressed) {
 					gif = left_hit;
+				}
+				if(input.pPressed) {
+					g2.drawImage(left_throw, (x - (2 * processor.TILE_SIZE)), y, (2 * processor.TILE_SIZE), processor.TILE_SIZE, processor);
 				}
 				break;
 			case "down":
@@ -119,11 +125,17 @@ public class ENTITY_Player extends PARENT_Entity {
 				if(input.kPressed) {
 					gif = down_hit;
 				}
+				if(input.pPressed) {
+					g2.drawImage(down_throw, x, (y + processor.TILE_SIZE), processor.TILE_SIZE, (2 * processor.TILE_SIZE), processor);
+				}
 				break;
 			case "right":
 				gif = right;
 				if(input.kPressed) {
 					gif = right_hit;
+				}
+				if(input.pPressed) {
+					g2.drawImage(right_throw, (x + processor.TILE_SIZE), y, (2 * processor.TILE_SIZE), processor.TILE_SIZE, processor);
 				}
 				break;
 			case "upleft":
@@ -131,11 +143,17 @@ public class ENTITY_Player extends PARENT_Entity {
 				if(input.kPressed) {
 					gif = upleft_hit;
 				}
+				if(input.pPressed) {
+					g2.drawImage(upleft_throw, (x - (2 * processor.TILE_SIZE)), (y - (2 * processor.TILE_SIZE)), (2 * processor.TILE_SIZE), (2 * processor.TILE_SIZE), processor);
+				}
 				break;
 			case "upright":
 				gif = upright;
 				if(input.kPressed) {
 					gif = upright_hit;
+				}
+				if(input.pPressed) {
+					g2.drawImage(upright_throw, (x + processor.TILE_SIZE), (y - (2 * processor.TILE_SIZE)), (2 * processor.TILE_SIZE), (2 * processor.TILE_SIZE), processor);
 				}
 				break;
 			case "downleft":
@@ -143,11 +161,18 @@ public class ENTITY_Player extends PARENT_Entity {
 				if(input.kPressed) {
 					gif = downleft_hit;
 				}
+				if(input.pPressed) {
+					g2.drawImage(downleft_throw, (x - (2 * processor.TILE_SIZE)), (y + processor.TILE_SIZE), (2 * processor.TILE_SIZE), (2 * processor.TILE_SIZE), processor);
+
+				}
 				break;
 			case "downright":
 				gif = downright;
 				if(input.kPressed) {
 					gif = downright_hit;
+				}
+				if(input.pPressed) {
+					g2.drawImage(downright_throw, (x + processor.TILE_SIZE), (y + processor.TILE_SIZE), (2 * processor.TILE_SIZE), (2 * processor.TILE_SIZE), processor);
 				}
 				break;
 		}
