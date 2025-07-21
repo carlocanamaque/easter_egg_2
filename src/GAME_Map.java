@@ -3,6 +3,7 @@ package src;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.util.Random;
 
 
 public class GAME_Map{
@@ -24,6 +25,7 @@ public class GAME_Map{
 
 	public void draw(Graphics2D g2) {
 
+		double rand;
 		int col = 0;
 		int row = 0;
 		int x = 0;
@@ -31,7 +33,9 @@ public class GAME_Map{
 
 		while(col < processor.MAX_SCREEN_COL && row < processor.MAX_SCREEN_ROW) {
 
-			g2.drawImage(tiles[0].gif, x, y, processor.TILE_SIZE, processor.TILE_SIZE, processor);
+			rand = (Math.random() * 3);
+			int randInt = ((int) rand);
+			g2.drawImage(tiles[randInt].gif, x, y, processor.TILE_SIZE, processor.TILE_SIZE, processor);
 			x += processor.TILE_SIZE;
 			col++;
 
