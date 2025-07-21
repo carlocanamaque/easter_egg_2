@@ -95,49 +95,49 @@ public class ENTITY_Player extends PARENT_Entity {
 			case "up":
 				gif = up;
 				if(input.kPressed) {
-				gif = up_hit;
+					gif = up_hit;
 				}
 				break;
 			case "left":
 				gif = left;
 				if(input.kPressed) {
-				gif = left_hit;
+					gif = left_hit;
 				}
 				break;
 			case "down":
 				gif = down;
 				if(input.kPressed) {
-				gif = down_hit;
+					gif = down_hit;
 				}
 				break;
 			case "right":
 				gif = right;
 				if(input.kPressed) {
-				gif = right_hit;
+					gif = right_hit;
 				}
 				break;
 			case "upleft":
 				gif = upleft;
 				if(input.kPressed) {
-				gif = upleft_hit;
+					gif = upleft_hit;
 				}
 				break;
 			case "upright":
 				gif = upright;
 				if(input.kPressed) {
-				gif = upright_hit;
+					gif = upright_hit;
 				}
 				break;
 			case "downleft":
 				gif = downleft;
 				if(input.kPressed) {
-				gif = downleft_hit;
+					gif = downleft_hit;
 				}
 				break;
 			case "downright":
 				gif = downright;
 				if(input.kPressed) {
-				gif = downright_hit;
+					gif = downright_hit;
 				}
 				break;
 		}
