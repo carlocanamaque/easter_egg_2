@@ -19,7 +19,7 @@ public class GAME_Map {
 
 		setDefaultValues();
 	}
-	void setDefaultValues() {
+	private void setDefaultValues() {
 
 		tiles[0] = new PARENT_Tile();
 		tiles[0].gif = Toolkit.getDefaultToolkit().createImage("res/TILE_Grass_1.gif");

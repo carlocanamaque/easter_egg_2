@@ -22,7 +22,7 @@ public class ENTITY_Player extends PARENT_Entity {
 
 		setDefaultValues();
 	}
-	void setDefaultValues() {
+	private void setDefaultValues() {
 
 		x = 100;
 		y = 100;
