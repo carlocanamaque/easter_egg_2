@@ -42,10 +42,11 @@ public class GAME_Processor extends JPanel implements Runnable {
 		thread = new Thread(this);
 		thread.start();
 	}
-	void update() {
+	private void update() {
 
 		player.update();
 	}
+	@Override
 	public void paintComponent(Graphics g) {
 
 		super.paintComponent(g);
@@ -89,7 +90,7 @@ public class GAME_Processor extends JPanel implements Runnable {
 		JFrame window = new JFrame();
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setResizable(false);
-		window.setTitle("easter_egg_1");
+		window.setTitle("easter_egg_2");
 
 		GAME_Processor processor = new GAME_Processor();
 		window.add(processor);

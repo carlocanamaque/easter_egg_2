@@ -6,7 +6,7 @@ import java.awt.Toolkit;
 import java.util.Random;
 
 
-public class GAME_Map{
+public class GAME_Map {
 
 	GAME_Processor processor;
 	PARENT_Tile[] tiles = new PARENT_Tile[3];
@@ -17,6 +17,10 @@ public class GAME_Map{
 
 		this.processor = processor;
 
+		setDefaultValues();
+	}
+	void setDefaultValues() {
+
 		tiles[0] = new PARENT_Tile();
 		tiles[0].gif = Toolkit.getDefaultToolkit().createImage("res/TILE_Grass_1.gif");
 		tiles[1] = new PARENT_Tile();
@@ -26,6 +30,7 @@ public class GAME_Map{
 
 		int limit = (processor.MAX_SCREEN_ROW * processor.MAX_SCREEN_COL);
 		randInts = new int[limit];
+
 		for(int i = 0; i < limit; i++) {
 
 			double rand = (Math.random() * 3);
@@ -33,7 +38,7 @@ public class GAME_Map{
 			randInts[i] = randInt;
 		}
 	}
-	public void draw(Graphics2D g2) {
+	void draw(Graphics2D g2) {
 
 		int col = 0;
 		int row = 0;

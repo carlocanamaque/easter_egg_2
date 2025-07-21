@@ -11,13 +11,18 @@ public class ENTITY_Player extends PARENT_Entity {
 	GAME_Processor processor;
 	GAME_Input input;
 
-	Image up_hit, down_hit, left_hit, right_hit, upleft_hit, upright_hit, downleft_hit, downright_hit, 
-	up_throw, down_throw, left_throw, right_throw, upleft_throw, upright_throw, downleft_throw, downright_throw;
+	Image up_hit, down_hit, left_hit, right_hit, upleft_hit, upright_hit,
+	downleft_hit, downright_hit, up_throw, down_throw, left_throw, right_throw,
+	upleft_throw, upright_throw, downleft_throw, downright_throw;
 
 	public ENTITY_Player(GAME_Processor processor, GAME_Input input) {
 
 		this.processor = processor;
 		this.input = input;
+
+		setDefaultValues();
+	}
+	void setDefaultValues() {
 
 		x = 100;
 		y = 100;
@@ -50,7 +55,7 @@ public class ENTITY_Player extends PARENT_Entity {
 		downleft_throw = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_downleft_throw.gif");
 		downright_throw = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_downright_throw.gif");
 	}
-	public void update() {
+	void update() {
 
 		if(input.spacePressed) {
 			speed = 6;
@@ -97,7 +102,7 @@ public class ENTITY_Player extends PARENT_Entity {
 			y = nextY;
 		}
 	}
-	public void draw(Graphics2D g2) {
+	void draw(Graphics2D g2) {
 
 		Image gif = null;
 
@@ -108,7 +113,8 @@ public class ENTITY_Player extends PARENT_Entity {
 					gif = up_hit;
 				}
 				if(input.pPressed) {
-					g2.drawImage(up_throw, x, (y - (2 * processor.TILE_SIZE)), processor.TILE_SIZE, (2 * processor.TILE_SIZE), processor);
+					g2.drawImage(up_throw, x, (y-(2*processor.TILE_SIZE)),
+					processor.TILE_SIZE, (2*processor.TILE_SIZE), processor);
 				}
 				break;
 			case "left":
@@ -117,7 +123,8 @@ public class ENTITY_Player extends PARENT_Entity {
 					gif = left_hit;
 				}
 				if(input.pPressed) {
-					g2.drawImage(left_throw, (x - (2 * processor.TILE_SIZE)), y, (2 * processor.TILE_SIZE), processor.TILE_SIZE, processor);
+					g2.drawImage(left_throw, (x-(2*processor.TILE_SIZE)), y,
+					(2*processor.TILE_SIZE), processor.TILE_SIZE, processor);
 				}
 				break;
 			case "down":
@@ -126,7 +133,8 @@ public class ENTITY_Player extends PARENT_Entity {
 					gif = down_hit;
 				}
 				if(input.pPressed) {
-					g2.drawImage(down_throw, x, (y + processor.TILE_SIZE), processor.TILE_SIZE, (2 * processor.TILE_SIZE), processor);
+					g2.drawImage(down_throw, x, (y+processor.TILE_SIZE),
+					processor.TILE_SIZE, (2*processor.TILE_SIZE), processor);
 				}
 				break;
 			case "right":
@@ -135,7 +143,8 @@ public class ENTITY_Player extends PARENT_Entity {
 					gif = right_hit;
 				}
 				if(input.pPressed) {
-					g2.drawImage(right_throw, (x + processor.TILE_SIZE), y, (2 * processor.TILE_SIZE), processor.TILE_SIZE, processor);
+					g2.drawImage(right_throw, (x+processor.TILE_SIZE), y,
+					(2*processor.TILE_SIZE), processor.TILE_SIZE, processor);
 				}
 				break;
 			case "upleft":
@@ -144,7 +153,9 @@ public class ENTITY_Player extends PARENT_Entity {
 					gif = upleft_hit;
 				}
 				if(input.pPressed) {
-					g2.drawImage(upleft_throw, (x - (2 * processor.TILE_SIZE)), (y - (2 * processor.TILE_SIZE)), (2 * processor.TILE_SIZE), (2 * processor.TILE_SIZE), processor);
+					g2.drawImage(upleft_throw, (x-(2*processor.TILE_SIZE)),
+					(y-(2*processor.TILE_SIZE)), (2*processor.TILE_SIZE),
+					(2*processor.TILE_SIZE), processor);
 				}
 				break;
 			case "upright":
@@ -153,7 +164,9 @@ public class ENTITY_Player extends PARENT_Entity {
 					gif = upright_hit;
 				}
 				if(input.pPressed) {
-					g2.drawImage(upright_throw, (x + processor.TILE_SIZE), (y - (2 * processor.TILE_SIZE)), (2 * processor.TILE_SIZE), (2 * processor.TILE_SIZE), processor);
+					g2.drawImage(upright_throw, (x+processor.TILE_SIZE),
+					(y-(2*processor.TILE_SIZE)), (2*processor.TILE_SIZE),
+					(2*processor.TILE_SIZE), processor);
 				}
 				break;
 			case "downleft":
@@ -162,8 +175,9 @@ public class ENTITY_Player extends PARENT_Entity {
 					gif = downleft_hit;
 				}
 				if(input.pPressed) {
-					g2.drawImage(downleft_throw, (x - (2 * processor.TILE_SIZE)), (y + processor.TILE_SIZE), (2 * processor.TILE_SIZE), (2 * processor.TILE_SIZE), processor);
-
+					g2.drawImage(downleft_throw, (x-(2*processor.TILE_SIZE)),
+					(y+processor.TILE_SIZE), (2*processor.TILE_SIZE),
+					(2*processor.TILE_SIZE), processor);
 				}
 				break;
 			case "downright":
@@ -172,7 +186,9 @@ public class ENTITY_Player extends PARENT_Entity {
 					gif = downright_hit;
 				}
 				if(input.pPressed) {
-					g2.drawImage(downright_throw, (x + processor.TILE_SIZE), (y + processor.TILE_SIZE), (2 * processor.TILE_SIZE), (2 * processor.TILE_SIZE), processor);
+					g2.drawImage(downright_throw, (x+processor.TILE_SIZE),
+					(y+processor.TILE_SIZE), (2*processor.TILE_SIZE),
+					(2*processor.TILE_SIZE), processor);
 				}
 				break;
 		}

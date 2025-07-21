@@ -6,8 +6,7 @@ import java.awt.event.KeyListener;
 
 public class GAME_Input implements KeyListener {
 
-	boolean wPressed, aPressed, sPressed, dPressed, 
-			kPressed, pPressed, spacePressed;	
+	boolean wPressed, aPressed, sPressed, dPressed, kPressed, pPressed, spacePressed;	
 
 	@Override
 	public void keyTyped(KeyEvent e) {
