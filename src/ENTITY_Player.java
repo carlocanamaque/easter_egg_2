@@ -18,7 +18,6 @@ public class ENTITY_Player extends PARENT_Entity {
 
 		x = 100;
 		y = 100;
-		speed = 4;
 		direction = "down";
 
 		up = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_up.gif");
@@ -31,6 +30,13 @@ public class ENTITY_Player extends PARENT_Entity {
 		downright = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_downright.gif");
 	}
 	public void update() {
+
+		if(input.spacePressed) {
+			speed = 6;
+		} else {
+			speed = 4;
+		}
+
 		int nextX = x;
 		int nextY = y;
 
