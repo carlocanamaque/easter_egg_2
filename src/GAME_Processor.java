@@ -32,7 +32,7 @@ public class GAME_Processor extends JPanel implements Runnable {
 	public GAME_Processor() {
 
 		this.setPreferredSize(new Dimension(SCREEN_WIDTH, SCREEN_HEIGHT));
-		this.setBackground(Color.BLACK);
+		this.setBackground(Color.BLUE);
 		this.setDoubleBuffered(true);
 		this.addKeyListener(input);
 		this.setFocusable(true);
@@ -51,8 +51,8 @@ public class GAME_Processor extends JPanel implements Runnable {
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D)g;
 
-		player.draw(g2);
 		map.draw(g2);
+		player.draw(g2);
 
 		String os = System.getProperty("os.name").toLowerCase();
 		if (os.contains("linux")) {
