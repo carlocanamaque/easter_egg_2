@@ -11,7 +11,8 @@ public class ENTITY_Player extends PARENT_Entity {
 	GAME_Processor processor;
 	GAME_Input input;
 
-	Image up_hit, down_hit, left_hit, right_hit, upleft_hit, upright_hit, downleft_hit, downright_hit;
+	Image up_hit, down_hit, left_hit, right_hit, upleft_hit, upright_hit, downleft_hit, downright_hit, 
+	up_throw, down_throw, left_throw, right_throw, upleft_throw, upright_throw, downleft_throw, downright_throw;
 
 	public ENTITY_Player(GAME_Processor processor, GAME_Input input) {
 
@@ -39,6 +40,15 @@ public class ENTITY_Player extends PARENT_Entity {
 		upright_hit = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_upright_hit.gif");
 		downleft_hit = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_downleft_hit.gif");
 		downright_hit = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_downright_hit.gif");
+
+		up_throw = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_up_throw.gif");
+		down_throw = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_down_throw.gif");
+		left_throw = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_left_throw.gif");
+		right_throw = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_right_throw.gif");
+		upleft_throw = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_upleft_throw.gif");
+		upright_throw = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_upright_throw.gif");
+		downleft_throw = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_downleft_throw.gif");
+		downright_throw = Toolkit.getDefaultToolkit().createImage("res/ENTITY_Player_downright_throw.gif");
 	}
 	public void update() {
 
