@@ -8,7 +8,7 @@ import java.awt.Toolkit;
 public class GAME_Map{
 
 	GAME_Processor processor;
-	PARENT_Tile[] tiles;
+	PARENT_Tile[] tiles = new PARENT_Tile[3];
 
 	public GAME_Map(GAME_Processor processor) {
 
