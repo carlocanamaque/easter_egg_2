@@ -31,7 +31,7 @@ public class GAME_Map{
 
 		while(col < processor.MAX_SCREEN_COL && row < processor.MAX_SCREEN_ROW) {
 
-			g2.drawImage(tiles[0], x, y, processor.TILE_SIZE, processor.TILE_SIZE, processor);
+			g2.drawImage(tiles[0].gif, x, y, processor.TILE_SIZE, processor.TILE_SIZE, processor);
 			x += processor.TILE_SIZE;
 			col++;
 
